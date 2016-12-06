@@ -1,2 +1,1 @@
-# Enterprise Application Development
-# Code Repository
+# CS3433 Enterprise Application Development Code Repository

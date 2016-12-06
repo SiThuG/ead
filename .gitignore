@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+node_modules/
+node/node_modules/
+bower_components/
+vendor/
+samples/demo/gradle/
