@@ -8,3 +8,6 @@ node/node_modules/
 bower_components/
 vendor/
 samples/demo/gradle/
+/samples/AffableBean/nbproject/private/
+/samples/AffableBean/build/
+/samples/AffableBean/dist/
