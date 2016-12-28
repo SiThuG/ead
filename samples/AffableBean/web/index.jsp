@@ -1,14 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-<%--
-    Document   : index
-    Created on : Jun 9, 2010, 3:59:32 PM
-    Author     : tgiunipero
---%>
-
-<sql:query var="category" dataSource="jdbc/affablebean">
-    SELECT * FROM category
-</sql:query>
 
 <div id="indexLeftColumn">
     <div id="welcomeText">
@@ -20,7 +11,7 @@
 </div>
 
 <div id="indexRightColumn">
-    <c:forEach var="category" items="${category.rows}">
+    <c:forEach var="category" items="${categories}">
         <div class="categoryBox">
             <a href="category?${category.id}">
 
