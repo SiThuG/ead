@@ -77,7 +77,10 @@ CREATE  TABLE IF NOT EXISTS `affablebean`.`product` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NOT NULL ,
   `price` DECIMAL(5,2) NOT NULL ,
+
+  -- Delete after description is moved to resource bundle
   `description` TINYTEXT NULL ,
+
   `last_update` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
   `category_id` TINYINT UNSIGNED NOT NULL ,
   PRIMARY KEY (`id`) ,
@@ -113,7 +116,9 @@ CREATE  TABLE IF NOT EXISTS `affablebean`.`ordered_product` (
     REFERENCES `affablebean`.`product` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+COMMENT = 'matches products with customer orders and records their quantity';
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
