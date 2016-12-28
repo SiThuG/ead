@@ -194,6 +194,8 @@ public class ControllerServlet extends HttpServlet {
                 String address = request.getParameter("address");
                 String cityRegion = request.getParameter("cityRegion");
                 String ccNumber = request.getParameter("creditcard");
+                
+                int orderId = orderManager.placeOrder(name, email, phone, address, cityRegion, ccNumber, cart);
             }
             userPath = "/confirmation";
         }
